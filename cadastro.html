@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrar pro Evento</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <script src="js/cadastro.js" defer></script>
+</head>
+<body class="bg-primary bg-gradient">
+    <div id="form-container" class="d-flex justify-content-center align-items-center">
+        <form class="bg-light bg-gradient row g-3 needs-validation" action="api/cadastrar.php" method="post" novalidate>
+            <legend>Registre-se</legend>
+            <div class="col-12">
+                <label for="u-nome" class="form-label">Nome</label>
+                <input type="text" maxlength="256" class="form-control" name="u-nome" id="u-nome" required>
+                <div class="invalid-feedback">Digite um nome</div>
+            </div>
+            <div class="col-12">
+                <label for="u-email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" name="u-email" id="u-email" required>
+                <div class="invalid-feedback">Digite um e-mail válido</div>
+            </div>
+            <div class="col-md-6">
+                <label for="u-tel" class="form-label">Telefone</label>
+                <input type="tel" maxlength="11" class="form-control" name="u-tel" id="u-tel" required>
+                <div class="invalid-feedback">Digite um telefone válido</div>
+            </div>
+            <div class="col-md-6">
+                <label for="u-cpf" class="form-label">CPF</label>
+                <input type="text" minlength="11" maxlength="11" class="form-control" name="u-cpf"  id="u-cpf" required>
+                <div class="invalid-feedback">Digite um CPF válido</div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
